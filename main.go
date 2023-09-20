@@ -11,7 +11,7 @@ func main(){
   fmt.Println("Enter Number!")
   fmt.Scan(&searchNumber)
 
-  var res=fibonnaciRecursion(searchNumber,0,1)
+  var res=bubbleSort()
  
   fmt.Printf("result:%v",res)
 }
