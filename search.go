@@ -1,5 +1,6 @@
 package main
 
+
 var numbers = []int{1,3, 5, 5,6,1, 7, 8,9,1,5}
 
 func linearSrch(num int)int {
@@ -46,3 +47,27 @@ func findMostRepeated()int {
 
 	return mostRepeatNum
 }
+
+var sortedArray =[]int{2,4,6,7,8,9,11,22,33}
+func binarySearch(num int)int{
+	
+   var leng=len(sortedArray)
+   
+   var left=0
+   var right=leng
+   var mid int
+
+   for i:=0;i<leng;i++{
+	   mid=(left+right)/2
+      if num>sortedArray[mid]{
+		left=mid
+	  }else if num<sortedArray[mid]{
+		right=mid
+	  }else{
+		return mid
+	  }
+   }
+	
+   return mid
+}
+
