@@ -1,8 +1,8 @@
 package main
 
 import (
+	"alghorithms/queue_file"
 	"fmt"
-	
 )
 
 func main(){
@@ -11,7 +11,13 @@ func main(){
   fmt.Println("Enter Number!")
   fmt.Scan(&searchNumber)
 
-  var res=bubbleSort()
- 
+  myQueue:=queue_pck.Queue{}
+  myQueue.Enqueue(searchNumber)
+  myQueue.Enqueue(searchNumber+1)
+  myQueue.Enqueue(searchNumber-1)
+
+  myQueue.Dequeue()
+  var res=myQueue.ReturnAll()
+  
   fmt.Printf("result:%v",res)
 }
